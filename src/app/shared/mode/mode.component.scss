@@ -1,0 +1,21 @@
+:host {
+  display: flex;
+
+  .modes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30vw;
+    height: 30vh;
+
+    .admin {
+
+    }
+
+    .pos {
+
+    }
+  }
+}
+
+

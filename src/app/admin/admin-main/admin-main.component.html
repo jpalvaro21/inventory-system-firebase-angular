@@ -1,0 +1,19 @@
+<div class="admin-actions">
+  <button mat-raised-button color="primary" (click)="addInventory()">New Inventory</button>
+</div>
+
+
+<div class="invetory-list">
+  <div class="invetory-list-header spacer">
+    <div><b>Name</b></div>
+    <div><b>Brand</b></div>
+    <div><b>Price</b></div>
+    <div><b>Quantity</b></div>
+  </div>
+  <mat-card *ngFor="let item of inventory | async" class="spacer">
+    <div><b>{{item.name}}</b></div>
+    <div>{{item.brand}}</div>
+    <div>{{item.price}}</div>
+    <div>{{item.quantity}}</div>
+  </mat-card>
+</div>

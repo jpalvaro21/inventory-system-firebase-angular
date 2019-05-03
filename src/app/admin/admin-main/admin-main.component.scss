@@ -1,0 +1,37 @@
+:host {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+
+  .admin-actions {
+    display: flex;
+
+    button {
+      margin: 20px;
+    }
+  }
+
+  .invetory-list {
+    display: flex;
+    flex-direction: column;
+
+    .spacer {
+      display: flex;
+      margin: 5px 20px;
+      justify-content: space-evenly;
+
+      div {
+        width: 25%;
+      }
+    }
+
+    .invetory-list-header {
+
+
+    }
+
+    mat-card {
+    }
+  }
+
+}

@@ -1,0 +1,7 @@
+<ul>
+  <li class="text" *ngFor="let item of inventory | async">
+    <pre>{{item | json}}</pre>
+    <button (click)="add(item)">Add 1</button>
+    <button (click)="remove(item)">Remove 1</button>
+  </li>
+</ul>

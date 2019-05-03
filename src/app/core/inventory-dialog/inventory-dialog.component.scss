@@ -1,0 +1,34 @@
+.inventory-details {
+  display: flex;
+  flex-direction: column;
+
+  .name {
+    display: flex;
+  }
+
+  .price-and-quantity {
+    display: flex;
+    justify-content: space-between;
+
+    :last-child {
+      margin-left: 8px;
+    }
+  }
+
+  .additional-info {
+    display: flex;
+  }
+
+  mat-form-field {
+    flex-grow: 1;
+  }
+}
+
+
+.mat-dialog-actions {
+  justify-content: space-between;
+
+  button {
+    flex-grow: 1;
+  }
+}

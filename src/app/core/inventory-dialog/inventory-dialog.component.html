@@ -1,0 +1,40 @@
+<h1 mat-dialog-title>Add Inventory</h1>
+<div mat-dialog-content [formGroup]="inventoryDialogForm" class="inventory-details">
+
+  <div class="name">
+    <mat-form-field appearance="outline">
+      <mat-label>Name*</mat-label>
+      <input matInput placeholder="Name" formControlName="name">
+    </mat-form-field>
+  </div>
+
+  <div class="name">
+    <mat-form-field appearance="outline">
+      <mat-label>Brand (Optional)</mat-label>
+      <input matInput placeholder="Brand (Optional)" formControlName="brand">
+    </mat-form-field>
+  </div>
+
+  <div class="price-and-quantity">
+   <mat-form-field appearance="outline">
+      <mat-label>Price*</mat-label>
+      <input matInput type="number" step="0.25" placeholder="Price" formControlName="price">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Quantity</mat-label>
+      <input matInput type="number" step="1" placeholder="Quantity" formControlName="quantity">
+    </mat-form-field>
+  </div>
+
+  <div class="additional-info">
+    <mat-form-field appearance="outline">
+      <mat-label>Additional Information (Optional)</mat-label>
+      <textarea matInput placeholder="Description of inventory." formControlName="additionalInfo"></textarea>
+    </mat-form-field>
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button color="warn" (click)="cancel()">Cancel</button>
+  <button mat-raised-button color="primary" (click)="closeAndReturnInventory()" cdkFocusInitial>Add</button>
+</div>
