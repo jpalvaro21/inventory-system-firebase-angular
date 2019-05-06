@@ -8,23 +8,46 @@
     </mat-form-field>
   </div>
 
-  <div class="name">
+  <div class="brand name">
     <mat-form-field appearance="outline">
       <mat-label>Brand (Optional)</mat-label>
       <input matInput placeholder="Brand (Optional)" formControlName="brand">
     </mat-form-field>
   </div>
 
-  <div class="price-and-quantity">
-   <mat-form-field appearance="outline">
-      <mat-label>Price*</mat-label>
-      <input matInput type="number" step="0.25" placeholder="Price" formControlName="price">
-    </mat-form-field>
-
+  <div class="brand name">
     <mat-form-field appearance="outline">
       <mat-label>Quantity</mat-label>
       <input matInput type="number" step="1" placeholder="Quantity" formControlName="quantity">
     </mat-form-field>
+  </div>
+
+  <div class="bundle-info-header"><span>Bundling Info </span><mat-divider></mat-divider></div>
+
+  <div class="bundle-container">
+    <div class="price-and-quantity" *ngFor="let bundle of bundleInfo.controls; let i = index">
+      <mat-form-field appearance="outline">
+        <mat-label>Price*</mat-label>
+        <input matInput type="number" step="0.25" min="0.25" placeholder="Price" [formControl]="bundle.get('price')">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Bundle Quantity</mat-label>
+        <input matInput type="number" step="1" min="1" placeholder="Bundle Quantity" [formControl]="bundle.get('quantity')">
+      </mat-form-field>
+
+      <button mat-icon-button class="remove-bundle" (click)="removeBundle(i)">
+      <!-- [disabled]="bundleInfo.controls.length === 1"> -->
+        <mat-icon [class.disabled]="bundleInfo.controls.length === 1">indeterminate_check_box</mat-icon>
+      </button>
+    </div>
+  </div>
+
+  <div class="add-bundle">
+    <mat-divider></mat-divider>
+    <button mat-icon-button (click)="addBundle()">
+      <mat-icon aria-label="Add another bundle">add_box</mat-icon>
+    </button>
   </div>
 
   <div class="additional-info">

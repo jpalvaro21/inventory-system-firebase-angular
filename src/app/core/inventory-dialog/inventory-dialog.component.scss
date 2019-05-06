@@ -6,24 +6,79 @@
     display: flex;
   }
 
-  .price-and-quantity {
-    display: flex;
-    justify-content: space-between;
+  .bundle-info-header {
+    display:flex;
+    margin-bottom: 20px;
 
-    :last-child {
-      margin-left: 8px;
+    .mat-divider {
+      display: flex;
+      margin: 10px 0px 0px 10px;
+      border-top-width: 1px;
+      border-top-style: solid;
+      flex-grow: 1;
+    }
+  }
+
+  .bundle-container {
+    .price-and-quantity {
+      display: flex;
+      justify-content: space-between;;
+      align-items: center;
+
+      .remove-bundle {
+        .mat-icon {
+          color: red;
+          width: 40px;
+          height: 40px;
+          font-size: 40px;
+          margin-top: 7.5px;
+        }
+
+        .mat-icon.disabled {
+          color: gray;
+        }
+      }
+
+
+      :not(:first-child) {
+        margin-left: 8px;
+      }
+    }
+
+    // :last-child {
+      ::ng-deep.mat-form-field-wrapper {
+        padding-bottom: 0px;
+      }
+    // }
+  }
+
+  .add-bundle {
+    display: flex;
+
+    .mat-divider {
+      display: flex;
+      margin: 20px 10px 0px 0px;
+      border-top-width: 1px;
+      border-top-style: solid;
+      flex-grow: 1;
+    }
+
+    .mat-icon {
+      color: green;
+      width: 40px;
+      font-size: 40px;
     }
   }
 
   .additional-info {
     display: flex;
+    margin-top: 4px;
   }
 
   mat-form-field {
     flex-grow: 1;
   }
 }
-
 
 .mat-dialog-actions {
   justify-content: space-between;
