@@ -8,7 +8,7 @@ export const environment: EnvironmentModel = {
   production: false,
 
   firebaseConfig: {
-    apiKey: 'AIzaSyCG5Dy4PbvOhHpuitxfxJlaiJAA6DaAvs0',
+    apiKey: 'update key, old key was regenerated for security purposes.',
     authDomain: 'inventory-system-jp-dev.firebaseapp.com',
     databaseURL: 'https://inventory-system-jp-dev.firebaseio.com',
     projectId: 'inventory-system-jp-dev',
